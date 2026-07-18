@@ -12,7 +12,7 @@ Welcome to my cybersecurity lab portfolio! This repository contains hands-on doc
 * Vulnerability Exploitation % Analysis (Coming Soon!)*
 ### Google Cybersecurity Certificate Labs (Coursera)
 [Linux File Permissions Audit] (#-lab-3-linux-file-permissions-audit.md)
-[SQL Querying for Security Incident Investigation](#-lab-4-sql-querying-for-security-incident-investigation-google-cybersecurity-course-5)
+4.'[SQL Querying for Security Incident Investigation](sql-incident-investigation.md)'
 [Wireshark Network Traffic Analysis](#-lab-5-wireshark-network-traffic-analysis-google-cybersecurity-course-6)
 ----
 ## Lab 1: Network Discovery & Port Scanning (Nmap)
