@@ -3,17 +3,17 @@ Welcome to my cybersecurity lab portfolio! This repository contains hands-on doc
 ----
 ## Lab architecture:
 *** Attacker Machine:** Kali Linux (Debian-based penetration testing platform)
-*** Targrt Machine:** Metasploitable 2 (Intentionally vulnerable Linux virtual machine)
+*** Target Machine:** Metasploitable 2 (Intentionally vulnerable Linux virtual machine)
 *** Network Design:** Host-Only Private Virtual Network (IP Range: '192.168.56.0/24') for secure, isolated testing.
 ----
 ## Lab Index
 ### Practical Sandbox Labs (Hands-on Range)
-[Network Discovery & Port Scanning (Nmap)](#-lab-1-network-discovery--port-scanning-nmap)
-* Vulnerability Exploitation % Analysis (Coming Soon!)*
+1.[Network Discovery & Port Scanning (Nmap)](#-lab-1-network-discovery--port-scanning-nmap)
+2.* Vulnerability Exploitation % Analysis (Coming Soon!)*
 ### Google Cybersecurity Certificate Labs (Coursera)
-[Linux File Permissions Audit] (#-lab-3-linux-file-permissions-audit.md)
-4.'[SQL Querying for Security Incident Investigation](sql-incident-investigation.md)'
-[Wireshark Network Traffic Analysis](#-lab-5-wireshark-network-traffic-analysis-google-cybersecurity-course-6)
+3. [Linux File Permissions Audit](linux-permissions-audit.md)
+4. [SQL Querying for Security Incident Investigation](sql-incident-investigation.md)
+5. [Wireshark Network Traffic Analysis](wireshark-traffic-analysis.md)
 ----
 ## Lab 1: Network Discovery & Port Scanning (Nmap)
 ### Objective:
