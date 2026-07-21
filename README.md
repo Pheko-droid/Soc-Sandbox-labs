@@ -9,7 +9,7 @@ Welcome to my cybersecurity lab portfolio! This repository contains hands-on doc
 ## Lab Index
 ### Practical Sandbox Labs (Hands-on Range)
 1.[Network Discovery & Port Scanning (Nmap)](#-lab-1-network-discovery--port-scanning-nmap)
-2.* Vulnerability Exploitation % Analysis (Coming Soon!)*
+2. [Vulnerability Analysis & Service Hardening](Vulnerability-analysis.md)*
 ### Google Cybersecurity Certificate Labs (Coursera)
 3. [Linux File Permissions Audit](linux-permissions-audit.md)
 4. [SQL Querying for Security Incident Investigation](sql-incident-investigation.md)
