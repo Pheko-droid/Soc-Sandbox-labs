@@ -10,10 +10,11 @@ Welcome to my cybersecurity lab portfolio! This repository contains hands-on doc
 ### Practical Sandbox Labs (Hands-on Range)
 1.[Network Discovery & Port Scanning (Nmap)](#-lab-1-network-discovery--port-scanning-nmap)
 2. [Vulnerability Analysis & Service Hardening](Vulnerability-analysis.md)*
+3.[Network Traffic Analysis: PCAP Inspection with Wireshark](wireshark-pcap-analysis.md)
 ### Google Cybersecurity Certificate Labs (Coursera)
-3. [Linux File Permissions Audit](linux-permissions-audit.md)
-4. [SQL Querying for Security Incident Investigation](sql-incident-investigation.md)
-5. [Wireshark Network Traffic Analysis](wireshark-traffic-analysis.md)
+4. [Linux File Permissions Audit](linux-permissions-audit.md)
+5. [SQL Querying for Security Incident Investigation](sql-incident-investigation.md)
+6. [Wireshark Network Traffic Analysis](wireshark-traffic-analysis.md)
 ----
 ## Lab 1: Network Discovery & Port Scanning (Nmap)
 ### Objective:
