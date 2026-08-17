@@ -2,7 +2,7 @@
 Welcome to my practical cybersecurity home lab repository. This portfolio documents hands-on security exercises, network analysis, vulnerability assessments, SQL investigations, and defensive controls within an isolated virtual lab environment.
 ----
 ## Home Lab Environment & Architecture:
-*** Hypervisor:**VMware Workstation
+*** Hypervisor:**VMware Workstation, Microsoft Azure.
 ***Attacker/Analysis Workstation:**Kali Linux (Debian-based penetration testing platform)
 *** Target Machine:** Metasploitable 2 (Intentionally vulnerable Linux virtual machine)
 *** Network Design:** Host-Only Private Virtual Network (IP Range: '192.168.56.0/24') for secure, isolated testing.
@@ -10,6 +10,8 @@ Welcome to my practical cybersecurity home lab repository. This portfolio docume
 ##Core Tools & Technologies
 | Category | Tools & Technologies |
 | :--- | :--- |
+|**Cloud Security & SIEM** | Microsoft Azure, Microsoft Sentinel, Log Analytics Workspace |
+|** Remote Access & Networking** | FreeRDP, RDP, SSH |
 | **Network Discovery & Scanning** | Nmap, Net cast |
 | **Protocol Analysis & Forensics** | Wireshark, Tshark |
 | **Operating Systems & Administration** | Linux (Kali, Ubuntu), Metasploitable, Bash, File Permissions |
@@ -18,6 +20,7 @@ Welcome to my practical cybersecurity home lab repository. This portfolio docume
 
 ## Lab Index & Case Studies
 ### Practical Sandbox Labs (Hands-on Range)
+1.[Azure Sentinel Threat Detection & SIEM Lab](Azure-Sentinel-detection-lab.md)
 1.[Network Discovery & Port Scanning (Nmap)](#-lab-1-network-discovery--port-scanning-nmap)
 2. [Vulnerability Analysis & Service Hardening](Vulnerability-analysis.md)
 **Focus: ** Access control auditing, default credential risks ('msfadmin'), and service configuration hardening.
@@ -77,4 +80,5 @@ Key Skills Demonstrated
 This lab environment was designed and verified on July 14,2026.
 ----
 ## Career Focus & Objective
+Aspiring **Junior SOC Analyst / Security Engineer** actively completing hands-on labs, certifications and cloud architecture coursework (Google Cybersecurity, CompTIA Security+, Microsoft Azure). Documenting real-world threat detection scenarios to build defensive operations readiness.
 Aspiring **Junior SOC Analyst / Security Engineer ** actively completing hands-on certifications and cloud architecture coursework (Google Cybersecurity, CompTIA Security+, Microsoft Azure). Documenting real-world threat detection scenarios to build defensive operations readiness.
