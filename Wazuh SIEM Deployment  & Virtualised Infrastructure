@@ -1,0 +1,38 @@
+# Module 02: Wazuh SIEM Deployment & Virtualized Infrastructure Networking
+
+## 📌 Executive Summary
+This module documents the initial deployment, resource optimization, and virtual networking configuration for a dual-VM security monitoring lab running locally via Oracle VirtualBox. The lab architecture establishes an attacker instance (**Kali Linux**) monitored by an enterprise-grade SIEM/EDR platform (**Wazuh Manager v4.14.7**).
+
+---
+
+## 📐 Lab Architecture & Resource Allocation
+
+| Component | OS / Appliance | Role | vCPU Allocation | RAM Allocation | Network Adapter |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Attacker Endpoint** | Kali Linux 2026.x | Endpoint / Target | 2 Cores | 2048 MB (2 GB) | NAT Network (`NatNetwork`) |
+| **SIEM / EDR Server** | Wazuh Manager v4.14.7 | Log Ingestion & Analytics | 2 Cores | 4096 MB (4 GB) | NAT Network (`NatNetwork`) |
+
+---
+
+## 🛠️ Key Technical Challenges & Engineering Remediations
+
+### 1. Host Resource Optimization (Hypervisor Memory Bottlenecks)
+* **Issue:** Default OVA import settings for Wazuh requested 8 GB RAM and 4 vCPUs, causing hypervisor memory starvation and execution errors when attempting to run Kali Linux concurrently.
+* **Remediation:** Manually adjusted memory profiles within VirtualBox Settings (`System -> Motherboard/Processor`). Downsized Wazuh to 4 GB RAM / 2 vCPUs and maintained Kali at 2 GB RAM. Successfully verified simultaneous VM execution without host stability degradation.
+
+### 2. Inter-VM Routing & Dual-Stack Connectivity
+* **Issue:** Default VirtualBox **NAT** mode isolated endpoints, preventing Kali from reaching the Wazuh Manager web console (`10.0.2.4`), while **Bridged** mode caused intermittent gateway disconnections on local Wi-Fi.
+* **Remediation:** Standardized both virtual machines on a unified **VirtualBox NAT Network** interface (`NatNetwork`). This provided an internal virtual router allowing:
+  * Full inter-VM routing (Kali $\leftrightarrow$ Wazuh).
+  * Inbound web console access via port 443 (`https://10.0.2.4`).
+  * Outbound WAN internet routing for package updates and telemetry outbound calls.
+
+### 3. DNS Resolution Troubleshooting
+* **Issue:** Kali Linux experienced `Temporary failure in name resolution` errors when attempting domain queries (`ping google.com`).
+* **Remediation:** Diagnosed systemd / `NetworkManager` DNS handshakes and updated `/etc/resolv.conf` to explicitly declare Google primary and secondary nameservers (`8.8.8.8` / `8.8.4.4`). Validated full ICMP connectivity with 0% packet loss.
+
+---
+
+## 📊 Deployment Verification
+* **Wazuh API Status:** `Online` (`v4.14.7`)
+* **Dashboard Gateway:** `https://10.0.2.4`
